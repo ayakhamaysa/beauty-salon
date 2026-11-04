@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-plum: #1f1b1d;       /* فحمي غامق، زي اللوجو */
+  --color-rose: #b88a96;       /* موف ناعم، زي كتابة Hair artist */
+  --color-blush: #efe6e8;
+  --color-cream: #faf7f6;
+  --color-ink: #1f1b1d;
+}
+
+/* Each language has its own fonts. The page swaps them when <html lang> changes */
+:root[lang="ar"] {
+  --font-display: "Amiri", serif;
+  --font-body: "IBM Plex Sans Arabic", system-ui, sans-serif;
+}
+:root[lang="en"] {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Jost", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  @apply bg-cream text-ink antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
